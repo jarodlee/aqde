@@ -21,7 +21,8 @@
 title: Life is a gift.
 email: lee.jarod@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  安庆的互联网从我们开始，安全的互联网由我们创造。
+  安庆的互联网从我们开始，
+  安全的互联网由我们创造。
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jarodlee
