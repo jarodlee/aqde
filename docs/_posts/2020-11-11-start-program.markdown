@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "¹¤ÓûÉÆÈÇÊÂ ±ØÏÈÀûÆäÆ÷"
+title:  "å·¥æ¬²å–„æƒ¹äº‹ å¿…å…ˆåˆ©å…¶å™¨"
 date:   2020-11-11 09:38:51 +0800
 categories: jekyll update
 ---
-¿ªÊ¼Ò»ÏîĞÂµÄ±à³Ì¹¤×÷Ç°£¬×îÖØÒªµÄÓ¦¸Ã¾ÍÊÇ¼ì²é×Ô¼ºµÄ¿ª·¢¹¤¾ßÊÇ·ñÒÑ¾­·ûºÏ¹¤×÷ĞèÇóÁË¡£
-±ÈÈçwindowsµçÄÔÖĞÊÇ·ñ°²×°ÁË[.net¿ò¼Ü](https://df.ghtxx.cn:89/externalLinksController/chain/dotnetfx45_full_4.5.51209.exe?ckey=fpVCxkP4uP139i1iK1B88xCXR4x0yzTshlf%2FB7ppu6JVrznRk%2BBQgni1bzS6HLvj)
+å¼€å§‹ä¸€é¡¹æ–°çš„ç¼–ç¨‹å·¥ä½œå‰ï¼Œæœ€é‡è¦çš„åº”è¯¥å°±æ˜¯æ£€æŸ¥è‡ªå·±çš„å¼€å‘å·¥å…·æ˜¯å¦å·²ç»ç¬¦åˆå·¥ä½œéœ€æ±‚äº†ã€‚
+æ¯”å¦‚windowsç”µè„‘ä¸­æ˜¯å¦å®‰è£…äº†[.netæ¡†æ¶](https://df.ghtxx.cn:89/externalLinksController/chain/dotnetfx45_full_4.5.51209.exe?ckey=fpVCxkP4uP139i1iK1B88xCXR4x0yzTshlf%2FB7ppu6JVrznRk%2BBQgni1bzS6HLvj)
+
+ç°ä»£çš„ä¸»æµç¼–ç¨‹å·¥å…·å¦‚æœæ²¡æœ‰.netåŸºæœ¬éƒ½æ— æ³•åœ¨windowsä¸Šè¿è¡Œäº†ã€‚æ¯”å¦‚githubçš„å®¢æˆ·ç«¯ç¨‹åºã€‚
