@@ -1,38 +1,44 @@
 # Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
+# which you are expected to set up once and rarely edit after that.
+# This file is *NOT* reloaded automatically when you use 'bundle exec jekyll serve'.
+# If you change this file, please restart the server process.
+
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
+# are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Life is a gift.
-email: lee.jarod@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  安庆的互联网从我们开始，
-  
-  安全的互联网由我们创造。
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jarodlee
-github_username:  jarodlee
+theme: jekyll-agency
 
-# Build settings
-theme: minima
+url    : "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+title      : Life is a gift.
+email      : lee.jarod@gmail.com #this is also the email contact forms will go to
+description: "安庆的互联网从我们开始，安全的互联网由我们创造。"
+author     : Jarod
+# logo:     #optional, defaults to site title
+  # path: assets\img\clients\creative-market.jpg
+  # height: 60 #height in px, defaults to 52px
+
 plugins:
   - jekyll-feed
+
+analytics:
+  google: #Google Analytics tracking code here
+
+collections:
+  portfolio:
+
+markdown: kramdown
+
+# Uncomment following line to use Formspree form ID based URL instead of email based URL
+# Details: https://help.formspree.io/hc/en-us/articles/360017735154-How-to-prevent-spam
+# formspree_form_path: "f/a_form_id"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
