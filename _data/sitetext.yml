@@ -14,7 +14,7 @@ services:
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "Responsive Design"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
-        icon: fas fa-laptop       
+        icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
         desc: "Your description here, full **Markdown** support"
         icon: fab fa-markdown
@@ -24,10 +24,10 @@ portfolio:
     text: "Lorem ipsum dolor sit amet consectetur."
     section: portfolio
     closebutton: "Close Project"
-    
+
 
 timeline:
-    title: "About" 
+    title: "About"
     text: "Lorem ipsum timeline"
     section: timeline
     # left is the default
@@ -37,12 +37,12 @@ timeline:
         year: "2009-2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
         image: assets/img/timeline/1.jpg
-        alt: 
+        alt:
       - title: "An Agency is Born"
         year: "March 2011"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
         image: assets/img/timeline/2.jpg
-        alt: 
+        alt:
       - title: "Jekyll Theme is created"
         year: "2019"
         desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
@@ -52,7 +52,7 @@ timeline:
         year: "2009-2011"
         desc: "Your description here, **Markdown** is fully supported."
         image: assets/img/timeline/4.jpg
-        alt: 
+        alt:
         # you can enforce the aligment
         align: right
     end: "Be Part <br> of Our <br> Story!"
@@ -79,7 +79,7 @@ clients:
       - title: "Creative Market"
         url: https://github.com/jarodlee/mail-aqde
         logo: assets/img/clients/creative-market.jpg
-    
+
 team:
     title: "OUR AMAZING TEAM"
     text: "Lorem ipsum dolor sit amet consectetur."
@@ -96,9 +96,9 @@ team:
             icon: fab fa-facebook-f
           - url: https://nas.aqde.net:1980
             icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
-        image: assets/img/team/2.jpg
+      - name: "Jarod Lee"
+        role: "主讲老师"
+        image: assets/img/team/lxj.jpg
         social:
           - url: https://weibo.com/jarodlee
             icon: fab fa-twitter
@@ -116,17 +116,17 @@ team:
             icon: fab fa-facebook-f
           - url: https://nas.aqde.net:1980
             icon: fab fa-linkedin-in
-          
+
 contact:
     title: "Contact Us"
     text: "Lorem ipsum or call 123456789"
     section: contact
-    
+
 footer:
     legal: "Privacy Policy"
     social:
       - url: https://weibo.com/jarodlee
-        icon: "fab fa-twitter"  
+        icon: "fab fa-twitter"
       - url: https://courses.geek-8.com/curriculum
         icon: "fab fa-facebook-f"
       - url: https://nas.aqde.net:1980
