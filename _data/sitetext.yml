@@ -16,7 +16,7 @@ services:
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
       - title: "[技术在变,人不变](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "当年的 ** HTML ** 已经成为out **Markdown** 正在支持未来"
+        desc: "当年的 **HTML** 已经成为out, **Markdown** 正在支持未来"
         icon: fab fa-markdown
 
 portfolio:
