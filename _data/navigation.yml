@@ -1,18 +1,18 @@
 nav:
-  - title: "Services"
+  - title: "技术理念"
     section: services
 
-  - title: "Portfolio"
+  - title: "特色服务"
     section: portfolio
 
-  - title: "About"
+  - title: "历史悠久"
     section: timeline
 
-  - title: "Team"
+  - title: "团队合作"
     section: team
 
   - title: "联系我们"
     section: contact
 
-  - title: "少儿编程"
-    url: https://www.geek-8.com/
+  - title: "微店直销"
+    url: https://www.weidian.com/
