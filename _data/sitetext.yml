@@ -6,51 +6,51 @@ header:
 
 services:
     title: "Services"
-    text: "Lorem ipsum"
+    text: "科技以人为本"
     section: services
     list:
-      - title: "E-Commerce"
+      - title: "生活因科技而轻松"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Responsive Design"
+      - title: "自由的前提是技术"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Your description here, full **Markdown** support"
+      - title: "[技术在变,人不变]](https://en.wikipedia.org/wiki/Markdown)"
+        desc: "当年的 ** HTML ** 已经成为out **Markdown** 正在支持未来"
         icon: fab fa-markdown
 
 portfolio:
-    title: "Portfolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    title: "编程是什么"
+    text: "到处都在说编程,什么是编程,每个人其实可以有自己的看法与用法."
     section: portfolio
-    closebutton: "Close Project"
+    closebutton: "看完了"
 
 
 timeline:
-    title: "About"
-    text: "Lorem ipsum timeline"
+    title: "我们一直在努力"
+    text: "终身学习不是一句口号,是我们幸福的选择"
     section: timeline
     # left is the default
     #start_align: "left"
     events:
-      - title: "Our Humble Beginnings"
-        year: "2009-2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      - title: "我们谦虚的开始学习386"
+        year: "1998-2000"
+        desc: "在这个98刚诞生的大时代,我们用386做着基础的学习与教学,通过Novell Netware实现一个网络教室的聊天与教学"
         image: assets/img/timeline/1.jpg
         alt:
-      - title: "An Agency is Born"
-        year: "March 2011"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+      - title: "鸡肋产生了"
+        year: "August 2000"
+        desc: "学习的过程中总会遇到一些重要的选择与分水岭,我们的过往经验可以帮助您少走弯路,直达真正重要的技术巅峰"
         image: assets/img/timeline/2.jpg
         alt:
-      - title: "Jekyll Theme is created"
-        year: "2019"
-        desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+      - title: "加入开源世界"
+        year: "March 2012"
+        desc: "我们开始创作中文世界的第一个开源云计算平台**LuoYunCloud**,项目虽然嘎然而止了,但那也只是因为巨头们的进入让我们无法力敌,但我们也从此完全拥抱了开源世界"
         image: assets/img/timeline/3.jpg
         alt: image alt text
-      - title: "Title"
-        year: "2009-2011"
-        desc: "Your description here, **Markdown** is fully supported."
+      - title: "创新仍在继续"
+        year: "2017.09-2018.07"
+        desc: "在农村,我们仍然会帮助30名儿童掌握信息科技, **NOIP** 也是孩子们第一次听说并参与其中."
         image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the aligment
@@ -68,22 +68,22 @@ clients:
     horizontal-scrolling: "" #"yes/no"
     list:
       - title: "envato"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://github.com/
         logo: assets/img/clients/envato.jpg
       - title: "designmodo"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://www.google.com/ncr
         logo: assets/img/clients/designmodo.jpg
       - title: "themeforest"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://scratch.mit.edu
         logo: assets/img/clients/themeforest.jpg
       - title: "Creative Market"
-        url: https://github.com/jarodlee/mail-aqde
+        url: https://www.kerel.org
         logo: assets/img/clients/creative-market.jpg
 
 team:
     title: "OUR AMAZING TEAM"
-    text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    text: "专注少儿教育二十载,育人更重育心"
+    subtext: 只有真正的静下来学习 **编程教育** 只是教育的一部分,但孩子的成长就是我们的全部.
     section: team
     people:
       - name: "Kay Garland"
@@ -96,8 +96,8 @@ team:
             icon: fab fa-facebook-f
           - url: https://nas.aqde.net:1980
             icon: fab fa-linkedin-in
-      - name: "Jarod Lee"
-        role: "主讲老师"
+      - name: "李老师"
+        role: "高级讲师"
         image: assets/img/team/lxj.jpg
         social:
           - url: https://weibo.com/jarodlee
@@ -119,7 +119,7 @@ team:
 
 contact:
     title: "Contact Us"
-    text: "Lorem ipsum or call 123456789"
+    text: "Lorem ipsum or call 18133008271"
     section: contact
 
 footer:
