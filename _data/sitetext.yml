@@ -15,7 +15,7 @@ services:
       - title: "自由的前提是技术"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
         icon: fas fa-laptop
-      - title: "[技术在变,人不变]](https://en.wikipedia.org/wiki/Markdown)"
+      - title: "[技术在变,人不变](https://en.wikipedia.org/wiki/Markdown)"
         desc: "当年的 ** HTML ** 已经成为out **Markdown** 正在支持未来"
         icon: fab fa-markdown
 
@@ -67,17 +67,17 @@ clients:
     max-height: 100px
     horizontal-scrolling: "" #"yes/no"
     list:
-      - title: "envato"
+      - title: "GitHub"
         url: https://github.com/
         logo: assets/img/clients/envato.jpg
-      - title: "designmodo"
+      - title: "google"
         url: https://www.google.com/ncr
         logo: assets/img/clients/designmodo.jpg
-      - title: "themeforest"
+      - title: "MIT Scratch"
         url: https://scratch.mit.edu
         logo: assets/img/clients/themeforest.jpg
-      - title: "Creative Market"
-        url: https://www.kerel.org
+      - title: "Richard Stallman's Personal Site"
+        url: http://www.stallman.org/
         logo: assets/img/clients/creative-market.jpg
 
 team:
@@ -118,8 +118,8 @@ team:
             icon: fab fa-linkedin-in
 
 contact:
-    title: "Contact Us"
-    text: "Lorem ipsum or call 18133008271"
+    title: "联系我们"
+    text: "Wechat or call 18133008271"
     section: contact
 
 footer:
