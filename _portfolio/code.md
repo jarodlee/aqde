@@ -1,13 +1,13 @@
 ---
 title: 高级语言编程
 subtitle: Python,C++之类的竞赛语言.
-image: /images/python_c++.jpg.jpg
+image: /images/python_c++.jpg
 alt: Start coding
 
 caption:
   title: 高级语言编程
   subtitle: Python,C++之类的竞赛语言.
-  thumbnail: /images/python_c++.jpg.jpg
+  thumbnail: /images/python_c++.jpg
 ---
 当前信息学奥赛的首选语言. **Python** 更是当前大数据的首选语言,优势在与语法自然,重在逻辑,对学生的逻辑思维能力要求较高.
 
