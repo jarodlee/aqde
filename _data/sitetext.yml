@@ -9,11 +9,11 @@ services:
     text: "科技以人为本"
     section: services
     list:
-      - title: "生活因科技而轻松"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "[生活因科技而轻松](https://weidian.com/?userid=331787507)"
+        desc: "选择一个好的产品是一种能力,我们在不断试错的过程中为您提供最优的选择与学习途径."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "自由的前提是技术"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "[自由的前提是技术](https://scratch.mit.edu/)"
+        desc: "使用 Scratch，你可以编写属于你的互动媒体，像是故事、游戏、动画，然后你可以将你的创意分享给全世界。Scratch 帮助年轻人更具创造力、逻辑力、协作力。 这些都是生活在 21 世纪不可或缺的基本能力。Scratch是MIT媒体实验室终生幼儿园小组开发的一个免费项目。"
         icon: fas fa-laptop
       - title: "[技术在变,人不变](https://en.wikipedia.org/wiki/Markdown)"
         desc: "当年的 **HTML** 已经成为out, **Markdown** 正在支持未来"
