@@ -71,8 +71,8 @@ clients:
         url: https://github.com/
         logo: assets/img/clients/envato.jpg
       - title: "designmodo"
-        url: https://www.google.com/ncr
-        logo: assets/img/clients/designmodo.jpg
+        url: https://www.kernel.org
+        logo: assets/img/clients/linux.jpg
       - title: "themeforest"
         url: https://scratch.mit.edu
         logo: assets/img/clients/themeforest.jpg
