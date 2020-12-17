@@ -73,9 +73,9 @@ clients:
       - title: "designmodo"
         url: https://www.kernel.org
         logo: assets/img/clients/linux.jpg
-      - title: "themeforest"
-        url: https://scratch.mit.edu
-        logo: assets/img/clients/themeforest.jpg
+      - title: "China Scratch Copy"
+        url: https://kada.163.com/project/v3/create.htm
+        logo: assets/img/clients/163scratch.jpg
       - title: "Richard Stallman's Personal Site"
         url: http://www.stallman.org/
         logo: assets/img/clients/creative-market.jpg
