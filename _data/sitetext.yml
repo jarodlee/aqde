@@ -72,7 +72,7 @@ clients:
         logo: assets/img/clients/163.jpg
       - title: "GitHub"
         url: https://github.com/
-        logo: assets/img/clients/github.png
+        logo: assets/img/clients/github.jpg
       - title: "designmodo"
         url: https://www.kernel.org
         logo: assets/img/clients/linux.jpg
