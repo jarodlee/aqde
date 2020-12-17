@@ -67,6 +67,9 @@ clients:
     max-height: 100px
     horizontal-scrolling: "" #"yes/no"
     list:
+      - title: "China Scratch Copy"
+        url: https://kada.163.com/project/v3/create.htm
+        logo: assets/img/clients/163.jpg
       - title: "GitHub"
         url: https://github.com/
         logo: assets/img/clients/envato.jpg
