@@ -12,11 +12,11 @@ services:
       - title: "[生活因科技而轻松](https://weidian.com/?userid=331787507)"
         desc: "选择一个好的产品是一种能力,我们在不断试错的过程中为您提供最优的选择与学习途径."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "[自由的前提是技术](https://scratch.mit.edu/)"
+      - title: "[自由的前提是技术](https://nas.aqde.net:1980/)"
         desc: "无论选择哪种编程语言,学习到的都是逻辑思维的训练载体,在学习中不断的锻炼逻辑思维能力"
         icon: fas fa-laptop
       - title: "[技术在变,人不变](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "当年的 **HTML** 已经成为out, **Markdown** 正在支持未来"
+        desc: "当年的 **HTML** 已经成为out, **Markdown** 正在支持未来,今天的技术,明天的主流,后天的落伍者,重要的是培养个人学习的能力与习惯"
         icon: fab fa-markdown
 
 portfolio:
