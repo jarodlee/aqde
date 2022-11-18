@@ -2,7 +2,7 @@ header:
     title:
     text: 安庆最佳编程指导
     button: Tell Me More
-    buttonlink: "https://nas.aqde.net:1980/MediaWiki/"
+    buttonlink: "https://nas.aqde.net:1980/MediaWiki/index.php?title=%E6%9D%8E%E8%80%81%E5%B8%88"
 
 services:
     title: "Services"
@@ -68,7 +68,7 @@ clients:
     horizontal-scrolling: "" #"yes/no"
     list:
       - title: "China Scratch Copy"
-        url: https://kada.163.com/project/v3/create.htm
+        url: https://nas.aqde.net:1980/MediaWiki/index.php?title=Scratch%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2
         logo: assets/img/clients/163.jpg
       - title: "GitHub"
         url: https://github.com/
@@ -94,17 +94,17 @@ team:
             icon: fab fa-twitter
           - url: https://courses.geek-8.com/curriculum
             icon: fab fa-facebook-f
-          - url: https://nas.aqde.net:1980
+          - url: http://2006.ghtxx.cn:88/bbs/
             icon: fab fa-linkedin-in
       - name: "李老师"
-        role: "高级讲师"
+        role: "专注信息"
         image: assets/img/team/lxj.jpg
         social:
           - url: https://weibo.com/jarodlee
             icon: fab fa-twitter
-          - url: https://courses.geek-8.com/curriculum
+          - url: https://git.aqde.net
             icon: fab fa-facebook-f
-          - url: https://nas.aqde.net:1980
+          - url: https://aqsh3x.com
             icon: fab fa-linkedin-in
       - name: "Diana Perterson"
         role: "Lead Developer"
@@ -112,14 +112,14 @@ team:
         social:
           - url: https://weibo.com/jarodlee
             icon: fab fa-twitter
-          - url: https://courses.geek-8.com/curriculum
+          - url: https://mail.aqde.net
             icon: fab fa-facebook-f
           - url: https://nas.aqde.net:1980
             icon: fab fa-linkedin-in
 
 contact:
     title: "联系我们"
-    text: "Wechat or call 18133008271"
+    text: "Wechat or Call 18133008271"
     section: contact
 
 footer:
@@ -127,7 +127,7 @@ footer:
     social:
       - url: https://weibo.com/jarodlee
         icon: "fab fa-twitter"
-      - url: https://courses.geek-8.com/curriculum
+      - url: https://git.aqde.net
         icon: "fab fa-facebook-f"
       - url: https://nas.aqde.net:1980
         icon: "fab fa-linkedin-in"
