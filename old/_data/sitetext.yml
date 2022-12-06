@@ -1,0 +1,140 @@
+header:
+    title:
+    text: 安庆最佳编程指导
+    button: Tell Me More
+    buttonlink: "https://nas.aqde.net:1980/MediaWiki/index.php?title=%E6%9D%8E%E8%80%81%E5%B8%88"
+
+services:
+    title: "Services"
+    text: "科技以人为本"
+    section: services
+    list:
+      - title: "[生活因科技而轻松](https://weidian.com/?userid=331787507)"
+        desc: "选择一个好的产品是一种能力,我们在不断试错的过程中为您提供最优的选择与学习途径."
+        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
+      - title: "[自由的前提是技术](https://nas.aqde.net:1980/)"
+        desc: "无论选择哪种编程语言,学习到的都是逻辑思维的训练载体,在学习中不断的锻炼逻辑思维能力"
+        icon: fas fa-laptop
+      - title: "[技术在变,人不变](https://en.wikipedia.org/wiki/Markdown)"
+        desc: "当年的 **HTML** 已经成为out, **Markdown** 正在支持未来,今天的技术,明天的主流,后天的落伍者,重要的是培养个人学习的能力与习惯"
+        icon: fab fa-markdown
+
+portfolio:
+    title: "编程是什么"
+    text: "到处都在说编程,什么是编程,每个人其实可以有自己的看法与用法."
+    section: portfolio
+    closebutton: "看完了"
+
+
+timeline:
+    title: "我们一直在努力"
+    text: "终身学习不是一句口号,是我们幸福的选择"
+    section: timeline
+    # left is the default
+    #start_align: "left"
+    events:
+      - title: "我们谦虚的开始学习386"
+        year: "1998-2000"
+        desc: "在这个98刚诞生的大时代,我们用386做着基础的学习与教学,通过Novell Netware实现一个网络教室的聊天与教学"
+        image: assets/img/timeline/1.jpg
+        alt:
+      - title: "鸡肋产生了"
+        year: "August 2000"
+        desc: "学习的过程中总会遇到一些重要的选择与分水岭,我们的过往经验可以帮助您少走弯路,直达真正重要的技术巅峰"
+        image: assets/img/timeline/2.jpg
+        alt:
+      - title: "加入开源世界"
+        year: "March 2012"
+        desc: "我们开始创作中文世界的第一个开源云计算平台**LuoYunCloud**,项目虽然嘎然而止了,但那也只是因为巨头们的进入让我们无法力敌,但我们也从此完全拥抱了开源世界"
+        image: assets/img/timeline/3.jpg
+        alt: image alt text
+      - title: "创新仍在继续"
+        year: "2017.09-2018.07"
+        desc: "在农村,我们仍然会帮助30名儿童掌握信息科技, **NOIP** 也是孩子们第一次听说并参与其中."
+        image: assets/img/timeline/4.jpg
+        alt:
+        # you can enforce the aligment
+        align: right
+    end: "Be Part <br> of Our <br> Story!"
+
+about:
+    title: "About Us"
+    text: "our story"
+    section: about
+
+clients:
+    section: clients
+    max-height: 100px
+    horizontal-scrolling: "" #"yes/no"
+    list:
+      - title: "China Scratch Copy"
+        url: https://nas.aqde.net:1980/MediaWiki/index.php?title=Scratch%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2
+        logo: assets/img/clients/163.jpg
+      - title: "GitHub"
+        url: https://github.com/
+        logo: assets/img/clients/github.jpg
+      - title: "designmodo"
+        url: https://www.kernel.org
+        logo: assets/img/clients/linux.jpg
+      - title: "Richard Stallman's Personal Site"
+        url: http://www.stallman.org/
+        logo: assets/img/clients/creative-market.jpg
+
+team:
+    title: "OUR AMAZING TEAM"
+    text: "专注少儿教育二十载,育人更重育心"
+    subtext: 只有真正的静下来学习 **编程教育** 只是教育的一部分,但孩子的成长就是我们的全部.
+    section: team
+    people:
+      - name: "Kay Garland"
+        role: "Lead Designer"
+        image: assets/img/team/500x500.jpg
+        social:
+          - url: https://weibo.com/jarodlee
+            icon: fab fa-twitter
+          - url: https://courses.geek-8.com/curriculum
+            icon: fab fa-facebook-f
+          - url: http://2006.ghtxx.cn:88/bbs/
+            icon: fab fa-linkedin-in
+      - name: "李老师"
+        role: "专注信息"
+        image: assets/img/team/lxj.jpg
+        social:
+          - url: https://weibo.com/jarodlee
+            icon: fab fa-twitter
+          - url: https://git.aqde.net
+            icon: fab fa-facebook-f
+          - url: https://aqsh3x.com
+            icon: fab fa-linkedin-in
+      - name: "Diana Perterson"
+        role: "Lead Developer"
+        image: assets/img/team/500x500.jpg
+        social:
+          - url: https://weibo.com/jarodlee
+            icon: fab fa-twitter
+          - url: https://mail.aqde.net
+            icon: fab fa-facebook-f
+          - url: https://nas.aqde.net:1980
+            icon: fab fa-linkedin-in
+
+contact:
+    title: "联系我们"
+    text: "Wechat or Call 18133008271"
+    section: contact
+
+footer:
+    legal: "Privacy Policy"
+    social:
+      - url: https://weibo.com/jarodlee
+        icon: "fab fa-twitter"
+      - url: https://git.aqde.net
+        icon: "fab fa-facebook-f"
+      - url: https://nas.aqde.net:1980
+        icon: "fab fa-linkedin-in"
+      - url: https://github.com/jarodlee/mail-aqde
+        icon: "fab fa-github"
+      - url: https://mail.aqde.net
+        icon: "fab fa-instagram"
+
+
+# {{ site.data.sitetext.ex.ex | markdownify | default: example }}
