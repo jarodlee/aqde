@@ -14,8 +14,15 @@
 	<script src="js/script.js"></script>
 	<script src="js/TMForm.js"></script>
 	<script src="js/modal.js"></script>
-	<script src='//maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false'></script>
-	<!--[if (gt IE 9)|!(IE)]><!-->
+<!--引用百度地图API-->
+    <style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+
+		<!--[if (gt IE 9)|!(IE)]><!-->
 	<script src="js/jquery.mobile.customized.min.js"></script>
 	<script src="js/wow.js"></script>
 	<script>
@@ -195,57 +202,112 @@
 		</div>
 		<div class="footer_bottom"><a href="http://www.templatemonster.com/" rel="nofollow"><img src="images/footer-logo.png" alt="logo"></a></div>
 	</footer>
+
+	
+
 <script type="text/javascript">
-		google_api_map_init();
-		function google_api_map_init(){
-			var map;
-			var coordData = new google.maps.LatLng(parseFloat(40.6894388), parseFloat(-73.9036233,10)); 
-
-			var styleArray = [
-				{"featureType":"water","stylers":[{"color":"#021019"}]},
-				{"featureType":"landscape","stylers":[{"color":"#08304b"}]},
-				{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},
-				{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},
-				{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},
-				{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},
-				{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},
-				{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},
-				{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},
-				{"elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},
-				{"featureType":"transit","stylers":[{"color":"#146474"}]},
-				{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},
-				{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]}
-				]
-			 
-			function initialize() { 
-			  var mapOptions = { 
-				zoom: 12, 
-				center: coordData, 
-				scrollwheel: false, 
-				styles: styleArray 
-			  } 
- 
-			  var contentString = "<div></div>"; 
-			  var infowindow = new google.maps.InfoWindow({ 
-				content: contentString, 
-				maxWidth: 200 
-			  }); 
-			   
-			  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions); 
-
-
-			google.maps.event.addDomListener(window, 'resize', function() {
-
-			  map.setCenter(coordData);
-
-			  var center = map.getCenter();
-			});
-		}
-
-			google.maps.event.addDomListener(window, "load", initialize); 
-
-		}
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(117.049576,30.5382);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"我的位置",content:"安庆地云科技",point:"117.049248|30.53834",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
 </script>
+<script>
+	$(function(){
+		$('.isotope a').touchTouch();
+	});
+</script>
+
 <!-- coded by Fred -->
 </body>
 </html>
