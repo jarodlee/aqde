@@ -38,16 +38,30 @@
 	<title>设置地图3D视角</title>
 </head>
 <body>
+
+    <div class="container">
+        <h1>This site is rebuild.</h1>
+        <h3>hope be friend at <a href="https://nas.aqde.net:1980/MediaWiki/">myWiki</a></h3>
+        <ul>
+            <li><a href="https://admin.online.360.cn/client-download-page/downloads?token=vg2m7fJ1tAui7CN%2B1EwKpyJBx409geDaFSzG%2Bc%2FIyFvZRUJJI5FJyfksqf%2Ba6SdH">无广告的360安全管家</a>、【<a href="https://admin.online.360.cn/welcome">定制中心</a>】</li>
+            <li><a href="https://mail.aqde.net">登录邮箱</a>、<a href="https://ahaqsh3x.feishu.cn/mail">飞书平台</a></li>
+          <li>相关信息，请到“<a href="https://github.com/jarodlee/">GitHub</a>” 查看</li>
+        </ul>
+    </div>
+	
 	<div id="allmap"></div>
+
 
 <script type="text/javascript">
     // GL版命名空间为BMapGL
     // 按住鼠标右键，修改倾斜角和角度
 	var map = new BMapGL.Map("allmap");    // 创建Map实例
-	map.centerAndZoom(new BMapGL.Point(117.049576,30.5382), 19);  // 初始化地图,设置中心点坐标和地图级别
-	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-	map.setHeading(64.5);
-	map.setTilt(73);
+	map.centerAndZoom(new BMapGL.Point(117.049576,30.5382), 20);  // 初始化地图,设置中心点坐标和地图级别
+    map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+    var scaleCtrl = new BMapGL.ScaleControl();  // 添加比例尺控件
+    map.addControl(scaleCtrl);
+    var zoomCtrl = new BMapGL.ZoomControl();  // 添加缩放控件
+    map.addControl(zoomCtrl);
 </script>
 
  
@@ -62,14 +76,6 @@
 </script> 
   
   
-    <div class="container">
-        <h1>This site is rebuild.</h1>
-        <h3>hope be friend at <a href="https://nas.aqde.net:1980/MediaWiki/">myWiki</a></h3>
-        <ul>
-            <li><a href="https://admin.online.360.cn/client-download-page/downloads?token=vg2m7fJ1tAui7CN%2B1EwKpyJBx409geDaFSzG%2Bc%2FIyFvZRUJJI5FJyfksqf%2Ba6SdH">无广告的360安全管家</a>、【<a href="https://admin.online.360.cn/welcome">定制中心</a>】</li>
-            <li><a href="https://mail.aqde.net">登录邮箱</a>、<a href="https://ahaqsh3x.feishu.cn/mail">飞书平台</a></li>
-          <li>相关信息，请到“<a href="https://github.com/jarodlee/">GitHub</a>” 查看</li>
-        </ul>
-    </div>
+
 </body>
 </html>
