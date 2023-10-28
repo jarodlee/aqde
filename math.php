@@ -105,10 +105,10 @@
     <h1><a href="http://s.aqde.net/zuowen/">每天口算練習100分</a></h1>
     
 
-<p>问题 1：85 + 12</p>
+<p>问题 1：60 - 35</p>
 
 <form method="post">
-    <input type="hidden" name="correctAnswer" value="97">
+    <input type="hidden" name="correctAnswer" value="25">
     <input type="hidden" name="score" value="0">
     <input type="hidden" name="questionNumber" value="1">
     <label for="answer">请输入答案：</label>
