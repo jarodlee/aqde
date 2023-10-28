@@ -227,5 +227,8 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
         });
     </script>
     
+        <div style="text-align: center;">	<p><iframe width="800" height="150" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
+        </div>
+    
 </body>
 </html>
