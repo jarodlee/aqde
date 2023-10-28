@@ -1,8 +1,47 @@
+<?php
+session_start();
+
+// 文件名用于存储聊天消息
+$chatFile = 'chat.dat';
+
+// 检查并处理用户命令
+if (isset($_POST['message']) && !empty($_POST['message'])) {
+    $message = $_POST['message'];
+    $user = isset($_SESSION['username']) ? $_SESSION['username'] : $_SERVER['REMOTE_ADDR'];
+
+    if ($user === 'Mr.Lee' && $message === '/cls') {
+        // 如果用户名是Mr.Lee且输入了/cls命令
+        // 保存备份文件
+        $date = date('Y-m-d_H-i-s');
+		$backupFile = './tqq/' . $date . '.dat';
+		file_put_contents($backupFile, file_get_contents($chatFile));
+        file_put_contents($chatFile, '聊天记录已清除。');
+    } else {
+        // 格式化消息
+        $formattedMessage = date('H:i:s') . ' ' . $user . ': ' . $message . "\n";
+
+        // 将消息追加到文本文件
+        file_put_contents($chatFile, $formattedMessage, FILE_APPEND);
+    }
+
+    // 防止表单重复提交
+    header("Location: {$_SERVER['PHP_SELF']}");
+    exit;
+}
+
+// 读取聊天消息
+$chatMessages = file_get_contents($chatFile);
+
+// 设置用户名
+if (isset($_POST['username']) && !empty($_POST['username'])) {
+    $_SESSION['username'] = $_POST['username'];
+}
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>111.39.38.46's 简单聊天室</title>
+    <title><?php echo isset($_SESSION['username']) ? $_SESSION['username'] . "'s " : $_SERVER['REMOTE_ADDR'] . "'s "; ?>简单聊天室</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -92,12 +131,19 @@
     </style>
 </head>
 <body>
-    <h1>111.39.38.46's 简单聊天室</h1>
+    <h1><?php echo isset($_SESSION['username']) ? $_SESSION['username'] . "'s " : $_SERVER['REMOTE_ADDR'] . "'s "; ?>简单聊天室</h1>
     <div class="container">
         <div>
             <strong>聊天消息：</strong>
             <div class="chat-box" id="chat-box">
-                <div class="message user1">聊天记录已清除。10:22:53 Test: 今天天气不错呀！</div><div class="message user2">10:23:30 Test: 大家一起来聊聊最近的学习收获是什么吧！</div><div class="message user3"></div>            </div>
+                <?php 
+                $messages = explode("\n", $chatMessages);
+                foreach ($messages as $key => $message) {
+                    $userClass = "user" . (($key % 3) + 1);
+                    echo '<div class="message ' . $userClass . '">' . $message . '</div>';
+                }
+                ?>
+            </div>
         </div>
         <form method="post">
     <input type="text" name="message" placeholder="输入消息" required>
@@ -105,7 +151,7 @@
 </form>
 
 <form method="post">
-    <input type="text" name="username" placeholder="设置用户名" required value="111.39.38.46">
+    <input type="text" name="username" placeholder="设置用户名" required value="<?php echo isset($_SESSION['username']) ? $_SESSION['username'] : (isset($_POST['username']) ? $_POST['username'] : $_SERVER['REMOTE_ADDR']); ?>">
     <input type="submit" value="设置用户名">
 </form>
 
@@ -157,7 +203,7 @@
 <!-- 添加图片链接并居中 -->
     <div style="text-align: center;">
         <a href="http://s05.flagcounter.com/more/1LLU">
-            <img src="http://s05.flagcounter.com/mini/1LLU/bg_FFFFFF/txt_CC24FF/border_CCCCCC/flags_0/" alt="Free counters!" border="0">
+            <img src="<?= ($_SERVER['HTTPS'] ? 'https://' : 'http://') . 's05.flagcounter.com/mini/1LLU/bg_FFFFFF/txt_CC24FF/border_CCCCCC/flags_0/' ?>" alt="Free counters!" border="0">
         </a>
     </div>
   </div>
