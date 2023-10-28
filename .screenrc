@@ -1,0 +1,19 @@
+#
+## ~/.screenrc
+##
+#
+defencoding utf8
+#
+## 启动时不显示欢迎屏幕
+startup_message off
+#
+## 屏幕缓冲区 1024 行。
+defscrollback 4096
+#
+## 在最下一行显示窗口列表和时钟
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.kW}%-w%{.rY}%n %t%{-}%+w %=%{..G} root %H(%l) %{..Y} %Y/%m/%d %c:%s "
+#
+## 关闭错误提示
+vbell off
