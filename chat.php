@@ -144,6 +144,48 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
     }
 }
 
+/* 电脑版样式 */
+@media (min-width: 601px) {
+    .message {
+        max-height: none; /* 移除消息框的最大高度 */
+        overflow-y: visible; /* 移除滚动条 */
+    }
+
+    .user1 {
+        background-color: #FF0000; /* 红色 */
+        color: #fff;
+    }
+
+    .user2 {
+        background-color: #FFA500; /* 橙色 */
+        color: #fff;
+    }
+
+    .user3 {
+        background-color: #FFFF00; /* 黄色 */
+        color: #000;
+    }
+
+    .user4 {
+        background-color: #008000; /* 绿色 */
+        color: #fff;
+    }
+
+    .user5 {
+        background-color: #00FFFF; /* 青色 */
+        color: #000;
+    }
+
+    .user6 {
+        background-color: #0000FF; /* 蓝色 */
+        color: #fff;
+    }
+
+    .user7 {
+        background-color: #800080; /* 紫色 */
+        color: #fff;
+    }
+}
     
              /* 计时器样式 */
         .timer {
