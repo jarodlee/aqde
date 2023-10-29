@@ -41,6 +41,7 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="commands.js"></script>
     <title><?php echo isset($_SESSION['username']) ? $_SESSION['username'] . "'s " : $_SERVER['REMOTE_ADDR'] . "'s "; ?>简单聊天室</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -283,24 +284,6 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
 document.querySelector('form').addEventListener('submit', function (event) {
     var messageInput = document.querySelector('input[name="message"]');
     var message = messageInput.value;
-
-    // 定义不同的命令和对应的网址
-    var commands = {
-        '/aqsh3x': 'http://www.aqsh3x.com',
-        '/math': 'https://lzl.app/math.php',
-        '/lxj': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
-        '/ai': 'https://lzl.app/MediaWiki/index.php?title=ai',
-        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8®°å½•',
-        '/zuowen': 'http://s.aqde.net/zuowen/',
-        '/bing': 'http://bing.com',
-        '/google': 'http://google.com',
-        '/github': 'http://github.com',
-        '/baidu': 'http://baidu.com',
-        '/git': 'http://i.aqde.net:8099/',
-        '/oj': 'http://www.lizilu.org/',
-        '/screen': 'http://s.aqde.net/'
-        // 可以添加更多命令和网址
-    };
 
     // 检查用户输入的命令是否在commands对象中
     if (commands.hasOwnProperty(message)) {
