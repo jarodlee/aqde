@@ -227,8 +227,41 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
         });
     </script>
     
-        <div style="text-align: center;">	<p><iframe width="800" height="150" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
+       <div style="text-align: center;">	<p><iframe width="800" height="150" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
         </div>
-    
+        
+  <script>
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // 阻止默认表单提交行为
+
+    var messageInput = document.querySelector('input[name="message"]');
+    var message = messageInput.value;
+
+    // 定义不同的命令和对应的网址
+    var commands = {
+        '/aqsh3x': 'http://www.aqsh3x.com',
+        '/math': 'https://lzl.app/math.php',
+        '/lxj': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
+        '/ai': 'https://lzl.app/MediaWiki/index.php?title=ai',
+        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95'
+        // 可以添加更多命令和网址
+    };
+
+    // 检查用户输入的命令是否在commands对象中
+    if (commands.hasOwnProperty(message)) {
+        // 如果是有效命令，导航到相应的网址并在新窗口中打开
+        window.open(commands[message], '_blank');
+    } else {
+        // 如果不是有效命令，执行发送消息的逻辑
+        // 可以将用户消息发送到聊天室
+        // ...
+    }
+
+    // 清空消息输入框
+    messageInput.value = '';
+});
+
+ </script>
+
 </body>
 </html>
