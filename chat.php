@@ -49,6 +49,9 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-image: url('/bing.php?rand=true'); /* 替换 'your-image-url.jpg' 为您的背景图片文件的路径 */
+    		background-size: cover; /* 背景图片将被缩放以覆盖整个页面 */
+    		background-repeat: no-repeat; /* 防止背景图片重复显示 */
         }
 
         h1 {
@@ -175,6 +178,7 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
         // 调用滚动函数以确保始终显示最后一条消息
         scrollToBottom();
 		  });
+		  
 	
     </script>
 
@@ -208,26 +212,7 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
     </div>
   </div>
     
-     <script>
-        // 添加一个事件监听器，当用户点击"发送"按钮时触发
-        document.querySelector('form').addEventListener('submit', function (event) {
-            event.preventDefault(); // 阻止默认的表单提交行为
-
-            // 弹出确认对话框
-            var isConfirmed = confirm("您确定要发送这条消息吗？\n\n点击“确定”发送，点击“取消”重新写一条吧！。");
-
-            // 根据用户的选择采取行动
-            if (isConfirmed) {
-                // 用户点击“确定”，继续表单提交
-                this.submit();
-            } else {
-                // 用户点击“取消”，清空消息框
-                document.querySelector('input[name="message"]').value = "";
-            }
-        });
-    </script>
-    
-       <div style="text-align: center;">	<p><iframe width="800" height="150" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
+    <div style="text-align: center;">	<p><iframe width="800" height="90" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
         </div>
         
   <script>
@@ -245,6 +230,12 @@ document.querySelector('form').addEventListener('submit', function (event) {
         '/ai': 'https://lzl.app/MediaWiki/index.php?title=ai',
         '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95',
         '/zuowen': 'http://s.aqde.net/zuowen/',
+        '/bing': 'http://bing.com',
+        '/google': 'http://google.com',
+        '/github': 'http://github.com',
+        '/baidu': 'http://baidu.com',
+        '/git': 'http://i.aqde.net:8099/',
+        '/oj': 'http://www.lizilu.org/',
         '/screen': 'http://s.aqde.net/'
         // 可以添加更多命令和网址
     };
@@ -256,7 +247,20 @@ document.querySelector('form').addEventListener('submit', function (event) {
     } else {
         // 如果不是有效命令，执行发送消息的逻辑
         // 可以将用户消息发送到聊天室
-        // ...
+      
+            // 弹出确认对话框
+            var isConfirmed = confirm("您确定要发送这条消息吗？\n\n点击“确定”发送，点击“取消”重新写一条吧！。");
+
+            // 根据用户的选择采取行动
+            if (isConfirmed) {
+                // 用户点击“确定”，继续表单提交
+                this.submit();
+            } else {
+                // 用户点击“取消”，清空消息框
+                document.querySelector('input[name="message"]').value = "";
+            }
+        });
+
     }
 
     // 清空消息输入框
