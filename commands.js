@@ -1,5 +1,7 @@
 // commands.js
 var commands = {
+	'/nas': 'https://nas.aqde.net:8091/',
+	'/ght': 'https://noi.aqde.net:8888/files',
 	'/scratch': 'http://www.aqsh3x.com/MediaWiki/index.php?title=Scratch%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2',
 	'/Scratch': 'http://www.aqsh3x.com/MediaWiki/index.php?title=Scratch%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2',
 	'/key': 'http://www.aqsh3x.com/MediaWiki/index.php?title=%E9%94%AE%E7%9B%98%E7%BB%83%E4%B9%A0',
