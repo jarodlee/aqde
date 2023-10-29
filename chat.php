@@ -243,7 +243,9 @@ document.querySelector('form').addEventListener('submit', function (event) {
         '/math': 'https://lzl.app/math.php',
         '/lxj': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
         '/ai': 'https://lzl.app/MediaWiki/index.php?title=ai',
-        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95'
+        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95',
+        '/zuowen': 'http://s.aqde.net/zuowen/',
+        '/screen': 'http://s.aqde.net/'
         // 可以添加更多命令和网址
     };
 
