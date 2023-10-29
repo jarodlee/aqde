@@ -290,7 +290,7 @@ document.querySelector('form').addEventListener('submit', function (event) {
         '/math': 'https://lzl.app/math.php',
         '/lxj': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
         '/ai': 'https://lzl.app/MediaWiki/index.php?title=ai',
-        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8%AE%B0%E5%BD%95',
+        '/lzl': 'https://lzl.app/MediaWiki/index.php?title=2021%E7%BA%A75%E7%8F%AD%E6%95%99%E5%AD%A6%E8®°å½•',
         '/zuowen': 'http://s.aqde.net/zuowen/',
         '/bing': 'http://bing.com',
         '/google': 'http://google.com',
@@ -309,8 +309,18 @@ document.querySelector('form').addEventListener('submit', function (event) {
         // 清空消息输入框
         messageInput.value = '';
         event.preventDefault(); // 阻止默认表单提交行为
+    } else {
+        // 如果不是有效命令，弹出确认对话框
+        var isConfirmed = confirm("您确定要发送这条消息吗？\n\n点击“确定”发送，点击“取消”重新写一条吧！。");
+
+        // 根据用户的选择采取行动
+        if (!isConfirmed) {
+            // 用户点击“取消”，阻止表单提交
+            event.preventDefault();
+        }
     }
 });
+
 
 
  </script>
