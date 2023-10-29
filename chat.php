@@ -281,8 +281,6 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
         
   <script>
 document.querySelector('form').addEventListener('submit', function (event) {
-    event.preventDefault(); // 阻止默认表单提交行为
-
     var messageInput = document.querySelector('input[name="message"]');
     var message = messageInput.value;
 
@@ -308,28 +306,12 @@ document.querySelector('form').addEventListener('submit', function (event) {
     if (commands.hasOwnProperty(message)) {
         // 如果是有效命令，导航到相应的网址并在新窗口中打开
         window.open(commands[message], '_blank');
-    } else {
-        // 如果不是有效命令，执行发送消息的逻辑
-        // 可以将用户消息发送到聊天室
-      
-            // 弹出确认对话框
-            var isConfirmed = confirm("您确定要发送这条消息吗？\n\n点击“确定”发送，点击“取消”重新写一条吧！。");
-
-            // 根据用户的选择采取行动
-            if (isConfirmed) {
-                // 用户点击“确定”，继续表单提交
-                this.submit();
-            } else {
-                // 用户点击“取消”，清空消息框
-                document.querySelector('input[name="message"]').value = "";
-            }
-        });
-
+        // 清空消息输入框
+        messageInput.value = '';
+        event.preventDefault(); // 阻止默认表单提交行为
     }
-
-    // 清空消息输入框
-    messageInput.value = '';
 });
+
 
  </script>
 
