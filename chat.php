@@ -96,7 +96,8 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
             background-color: #0056b3;
         }
 
-        /* 移动设备样式 */
+
+/* 移动设备样式 */
 @media (max-width: 600px) {
     .message {
         margin-bottom: 10px;
@@ -106,22 +107,43 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
         max-height: 100px; /* 设置消息框的最大高度为100像素 */
         overflow-y: auto; /* 添加滚动条以处理超过最大高度的内容 */
     }
-                
-            .user1 {
-                background-color: #007bff;
-                color: #fff;
-            }
 
-            .user2 {
-                background-color: #FF5733;
-                color: #fff;
-            }
+    .user1 {
+        background-color: #FF0000; /* 红色 */
+        color: #fff;
+    }
 
-            .user3 {
-                background-color: #33FF55;
-                color: #000;
-            }
-        }
+    .user2 {
+        background-color: #FFA500; /* 橙色 */
+        color: #fff;
+    }
+
+    .user3 {
+        background-color: #FFFF00; /* 黄色 */
+        color: #000;
+    }
+
+    .user4 {
+        background-color: #008000; /* 绿色 */
+        color: #fff;
+    }
+
+    .user5 {
+        background-color: #00FFFF; /* 青色 */
+        color: #000;
+    }
+
+    .user6 {
+        background-color: #0000FF; /* 蓝色 */
+        color: #fff;
+    }
+
+    .user7 {
+        background-color: #800080; /* 紫色 */
+        color: #fff;
+    }
+}
+
     
              /* 计时器样式 */
         .timer {
@@ -142,7 +164,7 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
                 <?php 
                 $messages = explode("\n", $chatMessages);
                 foreach ($messages as $key => $message) {
-                    $userClass = "user" . (($key % 3) + 1);
+                    $userClass = "user" . (($key % 7) + 1);
                     echo '<div class="message ' . $userClass . '">' . $message . '</div>';
                 }
                 ?>
