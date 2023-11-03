@@ -251,12 +251,13 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
 </form>
       <div class="timer">
         <span id="timer">
-<a href="https://aqde.net" id="time_is_link"  target="_blank" rel="nofollow" style="font-size:18px">安庆 目前的時間:</a>
+<a href="https://time.is/Anqing" id="time_is_link" rel="nofollow" style="font-size:20px">安庆 目前的時間:</a>
 <span id="Anqing_z43d" style="font-size:20px"></span>
 <script src="//widget.time.is/t.js"></script>
 <script>
 time_is_widget.init({Anqing_z43d:{}});
 </script>
+
 
 
 </span>
