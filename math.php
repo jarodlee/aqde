@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- lzl的口算APP V7-->
+<!-- lzl的口算APP V8-->
 <html>
 <head>
  <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +32,8 @@
             padding: 5px;
             border: 2px solid #333;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 32px; /* Increase font size */
+            color: #0000ff; /* Set color to red */
         }
 
         input[type="submit"] {
@@ -50,14 +51,18 @@
         }
 
         .question {
-            font-size: 20px;
+            font-size: 40px;
             margin-top: 20px;
+            color: #ff0000; /* Set color to red */
+            
         }
 
         .answer {
             font-size: 20px;
             font-weight: bold;
             margin-top: 10px;
+            color: #0000ff; /* Set color to blue */
+            max-width: 200px; /* Limit width to 200px */
         }
 
         .feedback {
@@ -104,21 +109,77 @@
 <body>
     <h1><a href="http://s.aqde.net/zuowen/">每天口算練習100分</a></h1>
     
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $userAnswer = $_POST['answer'];
+    $correctAnswer = $_POST['correctAnswer'];
+    $score = $_POST['score'];
+    $questionNumber = $_POST['questionNumber'];
 
-<p>问题 1：81 × 3</p>
+    if ($userAnswer == $correctAnswer) {
+        $score++;
+        $feedback = '答对了！';
+    } else {
+        $feedback = '答错了，正确答案是 ' . $correctAnswer;
+    }
 
-<form method="post">
-    <input type="hidden" name="correctAnswer" value="243">
-    <input type="hidden" name="score" value="0">
-    <input type="hidden" name="questionNumber" value="1">
-    <label for="answer">请输入答案：</label>
-    <input type="text" name="answer" id="answer" pattern="[0-9]+(\.[0-9]+)?" title="只能输入数字和小数点">
-    <input type="submit" value="检查答案">
-</form>
+    $questionNumber++; // 递增题目编号，为下一题做准备
+} else {
+    $score = 0;
+    $feedback = '';
+    $questionNumber = 1; // 初始化第一个题目的编号为1
+}
 
-<div class="feedback"></div>
+// 生成随机数和运算符号
+$num1 = rand(2, 100);
+$operators = ['+', '-', '×', '÷']; // 包括加法、减法、乘法和除法
+$operator = $operators[array_rand($operators)];
 
-<p class="score">分数：0</p>
+if ($operator === '-') {
+    $num2 = rand(2, $num1 - 1); // 减法的第二个数在2到$num1-1之间
+    $num1 = max($num1, $num2);
+} elseif ($operator === '×') {
+    $num2 = rand(2, 9); // 乘法的第二个数在2到9之间
+} elseif ($operator === '÷') {
+    // 除法的第二个数在2到9之间
+    $num2 = rand(2, 9);
+    // 确保除法结果为整数
+    $num1 = $num2 * rand(1, 10);
+} else {
+    $num2 = rand(11, 99); // 加法的第二个数在11到99之间
+}
+
+// 计算正确答案
+switch ($operator) {
+    case '+':
+        $correctAnswer = $num1 + $num2;
+        break;
+    case '-':
+        $correctAnswer = $num1 - $num2;
+        break;
+    case '×':
+        $correctAnswer = $num1 * $num2;
+        break;
+    case '÷':
+        // 确保除法结果为整数
+        $correctAnswer = $num1 / $num2;
+        break;
+}
+?>
+
+    <form method="post">
+        <input type="hidden" name="correctAnswer" value="<?php echo $correctAnswer; ?>">
+        <input type="hidden" name="score" value="<?php echo $score; ?>">
+        <input type="hidden" name="questionNumber" value="<?php echo $questionNumber; ?>">
+        <p class="question">问题 <?php echo $questionNumber; ?>：<?php echo $num1 . ' ' . $operator . ' ' . $num2; ?></p>
+        <label for="answer">请输入答案：</label>
+        <input type="text" name="answer" id="answer" pattern="[0-9]+(\.[0-9]+)?" title="只能输入数字和小数点" autofocus>
+        <input type="submit" value="检查答案">
+    </form>
+
+<div class="feedback"><?php echo $feedback; ?></div>
+
+<p class="score">分数：<?php echo $score; ?></p>
 
 
 <br><br><br><br><br><br>
@@ -150,7 +211,7 @@
     </script>
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8654cf2aa14e4262a2a1bbd183095f84"}'></script><!-- End Cloudflare Web Analytics -->
 <div class="bottom-image">
-        <a href="http://s05.flagcounter.com/more/1LLU"><img src="http://s05.flagcounter.com/mini/1LLU/bg_FFFFFF/txt_CC24FF/border_CCCCCC/flags_0/" alt="Free counters!" border="0"></a>
+        <a href="http://s05.flagcounter.com/more/1LLU"><img src="<?= ($_SERVER['HTTPS'] ? 'https://' : 'http://') . 's05.flagcounter.com/mini/1LLU/bg_FFFFFF/txt_CC24FF/border_CCCCCC/flags_0/' ?>" alt="Free counters!" border="0"></a>
     </div>
 
 </body>
