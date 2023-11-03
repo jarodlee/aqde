@@ -273,7 +273,7 @@ time_is_widget.init({Anqing_z43d:{}});
     </div>
   </div>
     
-    <div style="text-align: center;">	<p><iframe width="800" height="90" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
+    <div style="text-align: center;">	<p><iframe allowtransparency="true" frameborder="0" width="875" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=5&bd=0&k=&f=0000ff&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=71890&w=875&h=98&align=center"></iframe></p>
         </div>
         
   <script>
