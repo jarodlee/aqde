@@ -250,23 +250,18 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
            
 </form>
       <div class="timer">
-        <span id="timer">0:00</span>
+        <span id="timer">
+<a href="https://time.is/Anqing" id="time_is_link" rel="nofollow" style="font-size:18px">安庆 目前的時間:</a>
+<span id="Anqing_z43d" style="font-size:20px"></span>
+<script src="//widget.time.is/t.js"></script>
+<script>
+time_is_widget.init({Anqing_z43d:{}});
+</script>
+
+
+</span>
     </div>
-    <script>
-        // JavaScript代码来实现计时器功能
-        var timerElement = document.getElementById('timer');
-        var seconds = 0;
-
-        function updateTimer() {
-            var minutes = Math.floor(seconds / 60);
-            var remainingSeconds = seconds % 60;
-            timerElement.innerText = minutes + ':' + (remainingSeconds < 10 ? '0' : '') + remainingSeconds;
-            seconds++;
-        }
-
-        setInterval(updateTimer, 1000);
-    </script>
-      
+          
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8654cf2aa14e4262a2a1bbd183095f84"}'></script><!-- End Cloudflare Web Analytics -->
 <div class="bottom-image">
 <!-- 添加图片链接并居中 -->
