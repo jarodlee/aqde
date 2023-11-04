@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // 生成随机数和运算符号
-$num1 = rand(2, 100);
+$num1 = rand(2, 1000);
 $operators = ['+', '-', '×', '÷']; // 包括加法、减法、乘法和除法
 $operator = $operators[array_rand($operators)];
 
@@ -146,7 +146,7 @@ if ($operator === '-') {
     // 确保除法结果为整数
     $num1 = $num2 * rand(1, 10);
 } else {
-    $num2 = rand(11, 99); // 加法的第二个数在11到99之间
+    $num2 = rand(11, 999); // 加法的第二个数在11到99之间
 }
 
 // 计算正确答案
