@@ -35,6 +35,7 @@ var commands = {
     'bd': 'http://baidu.com',
     'git': 'http://i.aqde.net:8099/',
     'oj': 'http://www.lizilu.org/',
+    'ip': 'http://www.ip111.cn/',
     'screen': 'http://s.aqde.net/',
     'sc': 'http://s.aqde.net/'
     // 可以添加更多命令和网址

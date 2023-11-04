@@ -357,10 +357,10 @@ time_is_widget.init({Anqing_z43d:{}});
     </div>
   </div>
     
-    <div style="text-align: center;">	<p><iframe width="800" height="90" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
+    <div style="text-align: center;">	<p><iframe allowtransparency="true" frameborder="0" width="875" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=5&bd=0&k=&f=0080ff&ltf=009944&htf=cc0000&q=1&e=0&a=0&c=71890&w=875&h=98&align=center"></iframe></p>
         </div>
         
-        <div style="text-align: center;">	<p>这是一个仅供学习交流使用的聊天小程序，在设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，上传前文件要用自己的用户名做为前缀来命名。发送聊天信息后会显示5秒的彩色对话，然后会自动刷新成当前的普通格式聊天记录。</p>
+        <div style="text-align: center;">	<p>这是一个仅供学习交流使用的聊天小程序，在设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，网速较慢，请耐心等待。发送聊天信息后会显示5秒的彩色对话，然后会自动刷新成当前的普通格式聊天记录。</p>
         </div>
   <script>
 document.querySelector('form').addEventListener('submit', function (event) {
