@@ -37,14 +37,19 @@ if (isset($_SESSION['username'])) {
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         // 处理文件上传逻辑
 
-// 增加文件上传功能
 // 处理文件上传
 if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-    $user = isset($_SESSION['username']) ? $_SESSION['username'] : $_SERVER['REMOTE_ADDR']; // 获取用户名
+    $user = isset($_SESSION['username']) ? $_SESSION['username'] : $_SERVER['REMOTE_ADDR'];
 
     $uploadDir = 'uploads/'; // 上传文件存储的目录
     $fileName = basename($_FILES['file']['name']);
-    $uploadFile = $uploadDir . $user . '_' . $fileName; // 使用用户名作为前缀
+    $fileExtension = pathinfo($fileName, PATHINFO_EXTENSION); // 获取文件扩展名
+    $timestamp = time(); // 获取当前时间戳
+
+    // 创建新文件名，将用户名和时间戳插入到文件名的中间
+    $fileParts = pathinfo($fileName);
+    $newFileName = $fileParts['filename'] . '_' . $user . '_' . $timestamp . '.' . $fileExtension;
+    $uploadFile = $uploadDir . $newFileName;
 
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
         // 文件上传成功，将链接添加到聊天记录中
@@ -55,6 +60,8 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         echo "上传文件时发生错误。";
     }
 }
+
+
 
     }
 }
