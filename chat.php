@@ -32,6 +32,31 @@ if (isset($_POST['message']) && !empty($_POST['message'])) {
 // 读取聊天消息
 $chatMessages = file_get_contents($chatFile);
 
+if (isset($_SESSION['username'])) {
+    // 用户名已设置，处理文件上传
+    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        // 处理文件上传逻辑
+        // ...
+
+// 增加文件上传功能
+if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+    // 处理文件上传
+    $uploadDir = 'uploads/'; // 上传文件存储的目录
+    $fileName = basename($_FILES['file']['name']);
+    $uploadFile = $uploadDir . $fileName;
+
+    if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
+        // 文件上传成功，将链接添加到聊天记录中
+        $fileLink = '<a href="' . $uploadFile . '" target="_blank">' . $fileName . '</a>';
+        $formattedMessage = date('H:i:s') . ' ' . $user . ' 上传了文件: ' . $fileLink . "\n";
+        file_put_contents($chatFile, $formattedMessage, FILE_APPEND);
+    } else {
+        echo "上传文件时发生错误。";
+    }
+}
+    }
+}
+
 // 设置用户名
 if (isset($_POST['username']) && !empty($_POST['username'])) {
     $_SESSION['username'] = $_POST['username'];
@@ -223,7 +248,57 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
     <input type="submit" value="设置用户名">
 </form>
 
+<div id="upload-section" style="<?php echo isset($_SESSION['username']) ? 'display:block;' : 'display:none;'; ?>">
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*, .pdf, .doc, .txt, .zip"> <!-- 允许上传的文件类型 -->
+        <input type="submit" value="上传文件">
+    </form>
+</div>
+
+
+
     <script>
+    
+// 更新聊天消息
+function updateChatMessages() {
+    var chatBox = document.getElementById('chat-box');
+    
+    // 使用Ajax请求获取最新聊天消息
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'get_chat_messages.php', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var newMessages = xhr.responseText;
+
+            // 清空聊天框
+            chatBox.innerHTML = '';
+
+            // 以换行符拆分新消息
+            var newMessagesArray = newMessages.split('\n');
+
+            // 重新添加新消息
+            newMessagesArray.forEach(function (message) {
+                if (message.trim() !== '') {
+                    var messageDiv = document.createElement('div');
+                    messageDiv.className = 'message';
+                    messageDiv.innerHTML = message; // 使用 innerHTML 以保留着色信息
+                    chatBox.appendChild(messageDiv);
+                }
+            });
+
+            // 自动滚动到底部
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    };
+    xhr.send();
+}
+
+
+// 每隔一段时间刷新聊天消息
+setInterval(updateChatMessages, 5000); // 每5秒刷新一次
+
+
+
         // 动态设置聊天框的最大高度为400像素
         var chatBox = document.querySelector('.chat-box');
         chatBox.style.maxHeight = '400px';
@@ -273,9 +348,11 @@ time_is_widget.init({Anqing_z43d:{}});
     </div>
   </div>
     
-    <div style="text-align: center;">	<p><iframe allowtransparency="true" frameborder="0" width="875" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=5&bd=0&k=&f=0000ff&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=71890&w=875&h=98&align=center"></iframe></p>
+    <div style="text-align: center;">	<p><iframe width="800" height="90" frameborder="0" scrolling="no" hspace="0" src="//i.tianqi.com/?c=code&a=getcode&id=48&num=6&icon=1"></iframe></p>
         </div>
         
+        <div style="text-align: center;">	<p>这是一个仅供学习交流使用的聊天小程序，在设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，上传前文件要用自己的用户名做为前缀来命名。发送聊天信息后会显示5秒的彩色对话，然后会自动刷新成当前的普通格式聊天记录。</p>
+        </div>
   <script>
 document.querySelector('form').addEventListener('submit', function (event) {
     var messageInput = document.querySelector('input[name="message"]');
