@@ -29,6 +29,7 @@ var commands = {
     'bing': 'http://bing.com',
     'b': 'http://bing.com',
     'g': 'http://google.com',
+    'c': 'https://chat.openai.com/',
     'github': 'http://github.com',
     'baidu': 'http://baidu.com',
     'bd': 'http://baidu.com',

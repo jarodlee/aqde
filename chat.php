@@ -34,16 +34,17 @@ $chatMessages = file_get_contents($chatFile);
 
 if (isset($_SESSION['username'])) {
     // 用户名已设置，处理文件上传
-    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
+        if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         // 处理文件上传逻辑
-        // ...
 
 // 增加文件上传功能
+// 处理文件上传
 if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-    // 处理文件上传
+    $user = isset($_SESSION['username']) ? $_SESSION['username'] : $_SERVER['REMOTE_ADDR']; // 获取用户名
+
     $uploadDir = 'uploads/'; // 上传文件存储的目录
     $fileName = basename($_FILES['file']['name']);
-    $uploadFile = $uploadDir . $fileName;
+    $uploadFile = $uploadDir . $user . '_' . $fileName; // 使用用户名作为前缀
 
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadFile)) {
         // 文件上传成功，将链接添加到聊天记录中
@@ -54,6 +55,7 @@ if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
         echo "上传文件时发生错误。";
     }
 }
+
     }
 }
 
