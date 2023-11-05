@@ -386,9 +386,8 @@ document.querySelector('form').addEventListener('submit', function (event) {
     }
 });
 
-
-
  </script>
+
 
 </body>
 </html>

@@ -5,6 +5,7 @@ var commands = {
     'cnspeed': 'https://www.speedtest.cn/',
     'bz': 'https://www.bilibili.com/bangumi/media/md28223043',
     'aqtz': 'http://www.aqtz.gov.cn/',
+    '360': 'https://lzl.app/MediaWiki/index.php?title=360',
     'mp': 'https://mp.weixin.qq.com/',
     'wx': 'https://filehelper.weixin.qq.com/',
     'mj': 'https://www.mj.org.cn/',
