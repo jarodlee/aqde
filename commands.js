@@ -32,7 +32,7 @@ var commands = {
     'b': 'http://bing.com',
     'g': 'http://google.com',
     'c': 'https://chat.openai.com/',
-    'github': 'http://github.com',
+    'github': 'http://github.com/jarodlee/',
     'baidu': 'http://baidu.com',
     'bd': 'http://baidu.com',
     'git': 'http://i.aqde.net:8099/',
