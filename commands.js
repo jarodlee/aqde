@@ -1,6 +1,6 @@
 // commands.js
 var commands = {
-    'mp3': 'https://www.myfreemp3.com.cn/?page=audioPage&type=netease&name=80%E5%B9%B4%E4%BB%A3',
+    'mp3': 'https://www.myfreemp3.com.cn/?page=audioPage&type=netease&name=%E4%BB%BB%E7%B4%A0%E6%B1%90',
     'xx': 'https://www.xuexi.cn/',
     'map': 'https://j.map.baidu.com/cd/ExDK',
     'anqing': 'https://anhui.tianditu.gov.cn/anqing/',
