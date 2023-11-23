@@ -379,6 +379,9 @@ time_is_widget.init({Anqing_z43d:{}});
         
         <div style="text-align: center;">	<p>此聊天工具仅供学习交流使用，设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，网速较慢，请耐心等待。发送聊天信息后显示5秒的彩色对话，然后自动刷新成当前的普通格式聊天记录。</p>
         </div>
+        
+
+
   <script>
 document.querySelector('form').addEventListener('submit', function (event) {
     var messageInput = document.querySelector('input[name="message"]');
