@@ -94,6 +94,40 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
 
 	<script src="commands.js"></script>
     <title><?php echo isset($_SESSION['username']) ? $_SESSION['username'] . "'s " : $_SERVER['REMOTE_ADDR'] . "'s "; ?>公共聊天室</title>
+
+        <!-- 其他头部信息（样式，脚本等） -->
+    <script>
+        // 这里放置你的之前的聊天应用的 JavaScript 代码
+
+        // 读取保存在 Cookie 中的用户名
+        function getSavedUsername() {
+            var username = document.cookie.replace(/(?:(?:^|.*;\s*)username\s*=\s*([^;]*).*$)|^.*$/, "$1");
+            return username || null;
+        }
+
+        // 保存用户名到 Cookie 中
+        function saveUsernameToCookie(username) {
+            document.cookie = "username=" + username + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";
+        }
+
+        // 获取之前保存的用户名
+        var savedUsername = getSavedUsername();
+
+        // 如果有保存的用户名，则将其设置为输入框的默认值
+        if (savedUsername) {
+            document.querySelector('input[name="username"]').value = savedUsername;
+        }
+
+        // 处理表单提交时保存用户名
+        document.querySelector('form[name="usernameForm"]').addEventListener('submit', function (event) {
+            var usernameInput = document.querySelector('input[name="username"]');
+            var username = usernameInput.value;
+
+            // 保存用户名到 Cookie 中
+            saveUsernameToCookie(username);
+        });
+    </script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
