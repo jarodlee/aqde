@@ -105,9 +105,12 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
             return username || null;
         }
 
-        // 保存用户名到 Cookie 中
+        // 保存用户名到 Cookie 中，设置过期时间为一年
         function saveUsernameToCookie(username) {
-            document.cookie = "username=" + username + ";expires=Fri, 31 Dec 9999 23:59:59 GMT;path=/";
+            var expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 1); // 设置过期时间为一年
+
+            document.cookie = "username=" + username + ";expires=" + expirationDate.toUTCString() + ";path=/";
         }
 
         // 获取之前保存的用户名
