@@ -256,6 +256,13 @@ if (isset($_POST['username']) && !empty($_POST['username'])) {
             <strong>聊天消息：</strong>
             <div class="chat-box" id="chat-box">
                 <?php 
+                // 读取聊天消息
+                $chatMessages = file_get_contents($chatFile);
+
+                // 将链接转化为HTML格式
+                $chatMessages = preg_replace('/(http[s]?:\/\/[^\s]+)/', '<a href="$1" target="_blank">$1</a>', $chatMessages);
+
+                // 显示聊天消息
                 $messages = explode("\n", $chatMessages);
                 foreach ($messages as $key => $message) {
                     $userClass = "user" . (($key % 7) + 1);
@@ -321,7 +328,7 @@ function updateChatMessages() {
 
 
 // 每隔一段时间刷新聊天消息
-setInterval(updateChatMessages, 5000); // 每5秒刷新一次
+setInterval(updateChatMessages, 60000); // 每60秒自动刷新一次
 
 
 
@@ -347,28 +354,13 @@ setInterval(updateChatMessages, 5000); // 每5秒刷新一次
 		  
 	
     </script>
-
-           
 </form>
-      <div class="timer">
-        <span id="timer">
-<a href="https://time.is/Anqing" id="time_is_link" rel="nofollow" style="font-size:20px">安庆 目前的時間:</a>
-<span id="Anqing_z43d" style="font-size:20px"></span>
-<script src="//widget.time.is/t.js"></script>
-<script>
-time_is_widget.init({Anqing_z43d:{}});
-</script>
-
-
-
-</span>
-    </div>
           
     <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "8654cf2aa14e4262a2a1bbd183095f84"}'></script><!-- End Cloudflare Web Analytics -->
 <div class="bottom-image">
 <!-- 添加图片链接并居中 -->
     <div style="text-align: center;">
-        <a href="http://s05.flagcounter.com/more/1LLU">
+        <a href="http://s05.flagcounter.com/more/1LLU" target="_blank">
             <img src="<?= ($_SERVER['HTTPS'] ? 'https://' : 'http://') . 's05.flagcounter.com/mini/1LLU/bg_FFFFFF/txt_CC24FF/border_CCCCCC/flags_0/' ?>" alt="Free counters!" border="0">
         </a>
     </div>
@@ -377,13 +369,22 @@ time_is_widget.init({Anqing_z43d:{}});
     <div style="text-align: center;">	<p><iframe allowtransparency="true" frameborder="0" width="875" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=5&bd=0&k=&f=0080ff&ltf=009944&htf=cc0000&q=1&e=0&a=0&c=71890&w=875&h=98&align=center"></iframe></p>
         </div>
         
-        <div style="text-align: center;">	<p>此聊天工具仅供学习交流使用，设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，网速较慢，请耐心等待。发送聊天信息后显示5秒的彩色对话，然后自动刷新成当前的普通格式聊天记录。</p>
+        <div style="text-align: center;">	<p>此聊天工具仅供学习交流使用，设置用户名后可以上传图片与.pdf, .doc, .txt, .zip文档，网速较慢，请耐心等待。发送聊天信息后显示60秒的彩色对话，然后自动刷新成当前的普通格式聊天记录。</p>
         </div>
-        
 
+    <div class="timer">
+        <span id="timer">
+            <a href="https://time.is/Anqing" id="time_is_link" rel="nofollow" style="font-size:20px">安庆 目前的時間:</a>
+                <span id="Anqing_z43d" style="font-size:20px"></span>
+                <script src="//widget.time.is/t.js"></script>
+                    <script>
+                        time_is_widget.init({Anqing_z43d:{}});
+                    </script>
+        </span>
+    </div>
 
   <script>
-document.querySelector('form').addEventListener('submit', function (event) {
+    document.querySelector('form').addEventListener('submit', function (event) {
     var messageInput = document.querySelector('input[name="message"]');
     var message = messageInput.value;
 
