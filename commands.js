@@ -2,6 +2,9 @@
 var commands = {
     'mp3': 'https://www.myfreemp3.com.cn/?page=audioPage&type=netease&name=%E4%BB%BB%E7%B4%A0%E6%B1%90',
     'xx': 'https://www.xuexi.cn/',
+    'dy': 'https://www.ygdy8.com/',
+    'yun': 'https://rivers.chaitin.cn/landing/collie',
+    'kali': 'https://lzl.app/MediaWiki/index.php?title=Kali',
     'ra2': 'https://game.chronodivide.com/',
     'xapi': 'https://x.threatbook.com/v5/myApi',
     'cf': 'https://one.dash.cloudflare.com/',
