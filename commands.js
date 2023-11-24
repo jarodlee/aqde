@@ -48,6 +48,7 @@ var commands = {
     'aqsh3x': 'http://www.aqsh3x.com/MediaWiki/index.php?title=%E5%AE%89%E5%BA%86%E7%9F%B3%E5%8C%96%E4%B8%89%E5%B0%8F',
     'help': 'https://lzl.app/MediaWiki/index.php?title=%E8%81%8A%E5%A4%A9%E5%AE%A4%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3',
     '3x': 'http://aqsh3x.com',
+    '3': 'https://3.aqde.net/',
     '360': 'http://www.aqsh3x.com/MediaWiki/index.php?title=360',
     'game': 'https://www.msn.cn/zh-cn/play/arcade',
     'math': 'https://lzl.app/math.php',
