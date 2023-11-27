@@ -15,7 +15,7 @@ var commands = {
     'osmap': 'https://www.openstreetmap.org/',
     'anqing': 'https://anhui.tianditu.gov.cn/anqing/',
     'car': 'https://www.autohome.com.cn/anqing/',
-    'pvz': 'https://s.aqde.net/jspvz/',
+    'pvz': 'https://aqde.net/pvz/',
     'icloud': 'https://www.icloud.com/',
     'hk': 'https://www.hk.chinamobile.com/',
     'apple': 'https://www.apple.com.cn/',
