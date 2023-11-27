@@ -67,7 +67,7 @@ var commands = {
     'c': 'https://trust.openai.com/',
     't': 'https://t.aqde.net:8/',
     'h': 'http://x.aqde.net:8123/',
-    'x': 'https://i.ghtxx.cn:9090/system/terminal',
+    'x': 'https://i.ghtxx.cn:9090/metrics',
     'github': 'http://github.com/jarodlee/',
     'baidu': 'http://baidu.com',
     'bd': 'http://baidu.com',
