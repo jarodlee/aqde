@@ -71,6 +71,7 @@ var commands = {
     'github': 'http://github.com/jarodlee/',
     'baidu': 'http://baidu.com',
     'bd': 'http://baidu.com',
+    'git': 'https://lzl.app/MediaWiki/index.php?title=Git',
     'git': 'http://i.aqde.net:8099/',
     'oj': 'http://oj.aqde.net/',
     'ip': 'http://www.ip111.cn/',
