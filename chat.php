@@ -406,7 +406,7 @@ setInterval(updateChatMessages, 60000); // 每60秒自动刷新一次
     <div style="text-align: center;">	<p><iframe allowtransparency="true" frameborder="0" width="875" height="98" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=2&z=3&t=1&v=0&d=5&bd=0&k=&f=0080ff&ltf=009944&htf=cc0000&q=1&e=0&a=0&c=71890&w=875&h=98&align=center"></iframe></p>
         </div>
         
-        <div style="text-align: center;">	<p>此聊天工具仅供<a href="http://www.aqsh3x.com" target="_blank">学习交流</a>使用，设置用户名后可以<a href="https://m.aqde.net:89/home.html" target="_blank">上传</a>图片与.pdf, .doc, .txt, .zip文档，网速<a href="https://speed.cloudflare.com/" target="_blank">带宽20M</a>。发送聊天信息后显示60秒的<a href="https://github.com/jarodlee/aqde" target="_blank">彩色</a>对话，然后自动刷新成当前的普通格式聊天记录。</p>
+        <div style="text-align: center;">	<p>此聊天工具仅供<a href="http://www.aqsh3x.com" target="_blank">学习交流</a>使用，设置用户名后可以<a href="https://m.aqde.net:89/home.html" target="_blank">上传</a>图片与.pdf, .doc, .txt, .zip文档，网速<a href="https://speed.cloudflare.com/" target="_blank">带宽20M</a>。发送聊天信息后显示60秒的<a href="https://github.com/jarodlee/aqde" target="_blank">彩色</a>对话，然后自动刷新成当前的普通格式聊天<a href="http://i.aqde.net:8099/root/php-ai" target="_blank">记录</a>。</p>
         </div>
 
     <div class="timer">
