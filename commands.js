@@ -2,7 +2,7 @@
 var commands = {
     'mp3': 'https://www.myfreemp3.com.cn/?page=audioPage&type=netease&name=%E4%BB%BB%E7%B4%A0%E6%B1%90',
     'xx': 'https://www.xuexi.cn/',
-    'ad': 'http://ad.aqde.net/',
+    'ad': 'http://111.39.38.46:8088/',
     'dy': 'https://www.ygdy8.com/',
     'cut': 'https://www.capcut.cn/home-page',
     'yun': 'https://rivers.chaitin.cn/landing/collie',
