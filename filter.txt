@@ -21,6 +21,9 @@
 127.0.0.1  localhost
 ::1  localhost
 
+# [2345内置的新闻广告]
+127.0.0.1 *.bcebos.com
+127.0.0.1 lupic.cdn.bcebos.com
 # [163.com]
 127.0.0.1 analytics.163.com
 127.0.0.1 crash.163.com
