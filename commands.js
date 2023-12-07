@@ -2,6 +2,7 @@
 var commands = {
     'mp3': 'https://www.myfreemp3.com.cn/?page=audioPage&type=netease&name=%E4%BB%BB%E7%B4%A0%E6%B1%90',
     'xx': 'https://www.xuexi.cn/',
+    'wj': 'https://i.lizilu.org/MyOffice/%E5%85%AC%E5%8A%A1%E5%BE%AE%E4%BF%A1%E7%9B%AE%E5%BD%95/FileStorage/File/',
     'ad': 'http://111.39.38.46:8088/',
     'dy': 'https://www.ygdy8.com/',
     'cut': 'https://www.capcut.cn/home-page',
