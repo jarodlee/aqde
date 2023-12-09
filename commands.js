@@ -72,6 +72,7 @@ var commands = {
     't': 'https://t.aqde.net:8/',
     'h': 'http://x.aqde.net:8123/',
     'x': 'https://i.ghtxx.cn:9090/metrics',
+    'v': 'https://vercel.com/',
     'github': 'http://github.com/jarodlee/',
     'baidu': 'http://baidu.com',
     'bd': 'http://baidu.com',
