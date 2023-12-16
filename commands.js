@@ -63,6 +63,7 @@ var commands = {
     'zuowen': 'http://s.aqde.net/zuowen/',
     'bing': 'http://bing.com',
     'gpt': 'https://chat.openai.com/',
+    'a': 'https://v.lzl.app/',
     'z': 'https://tool.chinaz.com/',
     'i': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
     'b': 'http://bing.com',
