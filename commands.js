@@ -74,6 +74,7 @@ var commands = {
     'i': 'https://lzl.app/MediaWiki/index.php?title=%E9%98%85%E8%AF%BB%E5%88%97%E8%A1%A8',
     'k': 'https://kali.aqsh3x.com/',
     'v': 'https://vercel.com/',
+    'w': 'https://lzl.app/c.php',
     'x': 'https://i.ghtxx.cn:9090/metrics',
     'z': 'https://tool.chinaz.com/',
     'github': 'http://github.com/jarodlee/',
