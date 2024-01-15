@@ -1,0 +1,8 @@
+聊天记录已清除。14:49:24 192.168.1.10: 学生电脑使用此命令接入平台管理：curl -kfsSL 'http://collie-agent.chaitin.com:1443/api/v1/host/install_script?node=1&os_type=linux' | sudo bash -s -- --token=a90283aca8b1f36918caee97a257025c
+15:32:35 192.168.1.10: 准备看看这个国货了： https://www.chinauos.com/
+15:51:57 192.168.1.10: https://bbs.chinauos.com/
+16:42:33 218.23.241.6: 1111
+14:09:18 Mr.Lee: x
+14:10:15 Mr.Lee: wps
+14:32:11 111.39.38.46: x
+14:37:28 Mr.Lee: 无语了，安装网心云平台居然无意中把U盘给格式化了，好吧，少用U盘吧，文件乱的都找不到了。
